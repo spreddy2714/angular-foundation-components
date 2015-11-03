@@ -1,0 +1,34 @@
+<div  style="position: relative;">
+   
+     <div class="row collapse">
+         <div class="small-10 columns">
+           <input type="text" readonly="readonly" placeholder="Choose File" ng-model="fname" name="fileName" />
+	        <i class="fi-upload" style="position: absolute; top: 2px; right: 1px;"> </i>
+	        <input title="Upload file" type="file" name="fileName" ng-scope-element="list"
+	        style="position: absolute; top:0; left:0; height:100%; opacity:0; cursor: pointer;" />
+         </div>
+         
+         <div class="small-2 columns">
+           <a class="button postfix" ng-click="upload()">Add</a>
+
+         </div>
+       
+     </div>
+        
+      <div ng-repeat="fileObj in allFiles">
+          <div class="row">
+              <div class="small-10 columns">
+               {{fileObj.name}}
+              </div>
+              
+              <div class="small-2 columns">
+                <button class="arlink" ng-click="removeFile(fileObj)" >
+               <i class="fa fa-remove"></i>
+               </button>
+              </div>
+              
+          </div>
+      </div>
+      
+ </div>
+ 

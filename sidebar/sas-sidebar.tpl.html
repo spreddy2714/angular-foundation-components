@@ -1,0 +1,38 @@
+<div ng-controller="SideBarCtrl" ng-mouseleave="hideBar()">
+	<div class="sidebar" ng-class="{'slide-out':boolChangeClass}" ng-mouseenter="showBar()">
+		<div class="row">
+			<div class="large-2 small-2 columns">
+				<a href="#/admin/uservoice/new" title="New">
+					<i class="fi-page-add" style="font-size: 36px;">
+					</i>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-1 small-2 columns">
+				<a href="#/admin/uservoice/view" title="View">
+					<i class="fi-page-search" style="font-size: 36px;">
+					</i>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-1 small-2 columns">
+				<a href="#/teacher/uservoice/view" title="User View">
+					<i class="fi-list" style="font-size: 36px;">
+					</i>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-1 small-2 columns">
+				<a href="#/stu/uservoice/view" title="User View">
+					<i class="fi-list" style="font-size: 36px;">
+					</i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<button title="Uservoice" class="pullb fa fa-bullhorn fa-1x"
+		ng-class="{'pull-out' :boolChangeClass}" ng-click="click()" ></button>
+</div>
